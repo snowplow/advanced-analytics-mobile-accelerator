@@ -1,6 +1,6 @@
-title = "{{ACCELERATOR TEMPLATE}}"
-baseURL = "https://docs.snowplow.io/accelerators/{{YOUR BASE URL}}/"
+title = "Mobile App Analytics"
+baseURL = "https://docs.snowplow.io/accelerators/mobile/"
 
 [params]
-  description = "{{ACCELERATOR DESCRIPTION}}"
-  author = "{{AUTHOR NAMES}}"
+  description = "Tutorial for setting up Snowplow for mobile apps"
+  author = "Snowplow"
