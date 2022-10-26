@@ -1,6 +1,6 @@
-# Snowplow Accelerator Template
+# Advanced Analytics for Mobile Accelerator
 
-This is a template for a Snowplow accelerator. Instructions on set up can be viewed [here](https://docs.snowplow.io/accelerators/template/)
+This accelerator guides the user through setting up Snowplow tracking in mobile apps. It also introduces the Snowplow dbt mobile data model.
 
 ## Installation
 
