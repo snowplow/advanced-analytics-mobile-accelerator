@@ -1,6 +1,6 @@
-# Snowplow Accelerator Template
+# Advanced Analytics for Mobile Accelerator
 
-This is a template for a Snowplow accelerator. Instructions on set up can be viewed [here](https://docs.snowplow.io/accelerators/template/)
+This accelerator guides the user through setting up Snowplow tracking in mobile apps. It also introduces the Snowplow dbt mobile data model.
 
 ## Installation
 
@@ -13,7 +13,7 @@ git submodule update --init --recursive
 To build the Hugo app:
 
 ```sh
-./scripts/build.sh build
+./scripts/run.sh build
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ To build the Hugo app:
 To start an HTTP server serving the app, use:
 
 ```sh
-./scripts/build.sh serve
+./scripts/run.sh serve
 ```
 
 This will run `hugo server` on the background.
