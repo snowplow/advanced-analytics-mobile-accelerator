@@ -57,12 +57,12 @@ flutter pub add snowplow_tracker
 
 #### Step 2: Import the tracker package
 
-We recommend creating a class or a file with helper functions (e.g., `Tracker.swift`) to manage all the Snowplow related code in your project.
-Import the Snowplow tracker package in the file as follows:
-
 {{< tabs groupId="platform" >}}
 
 {{% tab name="iOS" %}}
+
+We recommend creating a class or a file with helper functions (e.g., `Tracker.swift`) to manage all the Snowplow related code in your project.
+Import the Snowplow tracker package in the file as follows:
 
 ```swift
 import SnowplowTracker
@@ -70,6 +70,9 @@ import SnowplowTracker
 
 {{% /tab %}}
 {{% tab name="Android" %}}
+
+We recommend creating a class or a file with helper functions (e.g., `Tracker.kt`) to manage all the Snowplow related code in your project.
+Import the Snowplow tracker package in the file as follows:
 
  ```java
 import com.snowplowanalytics.snowplow.Snowplow;
@@ -81,12 +84,18 @@ import com.snowplowanalytics.snowplow.controller.TrackerController;
 {{% /tab %}}
 {{% tab name="React Native" %}}
 
+We recommend creating a class or a file with helper functions (e.g., `tracker.js`) to manage all the Snowplow related code in your project.
+Import the Snowplow tracker package in the file as follows:
+
 ```typescript
 import { createTracker } from '@snowplow/react-native-tracker';
 ```
 
 {{% /tab %}}
 {{% tab name="Flutter" %}}
+
+We recommend creating a class or a file with helper functions (e.g., `tracker.dart`) to manage all the Snowplow related code in your project.
+Import the Snowplow tracker package in the file as follows:
 
 ```dart
 import 'package:snowplow_tracker/snowplow_tracker.dart'
