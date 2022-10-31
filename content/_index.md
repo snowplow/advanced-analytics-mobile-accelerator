@@ -95,9 +95,9 @@ gantt
         section 3. Visualise
         3h          :visualise, after model, 3m
         section 4. Track
-        3h          :track, after visualise, 6m
+        3h          :track, after visualise, 3m
         section 5. Next steps
-        1h          :next steps, after track, 2m
+        1h          :next steps, after track, 1m
 
 {{</mermaid >}}
 
