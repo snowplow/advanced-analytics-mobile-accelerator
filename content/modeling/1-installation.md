@@ -11,7 +11,7 @@ Add the snowplow-web package to your packages.yml file. The latest version can b
 ```yml
 packages:
   - package: snowplow/snowplow_mobile
-    version: 0.5.3
+    version: {{<component name="snowplow_mobile_latest">}}
 ```
 
 ***
