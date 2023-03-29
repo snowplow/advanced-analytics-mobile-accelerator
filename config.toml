@@ -4,3 +4,4 @@ baseURL = "https://docs.snowplow.io/accelerators/mobile/"
 [params]
   description = "Tutorial for setting up Snowplow for mobile apps"
   author = "Snowplow"
+  intercom=false
