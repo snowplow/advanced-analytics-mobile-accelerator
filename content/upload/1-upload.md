@@ -363,9 +363,7 @@ CREATE SCHEMA IF NOT EXISTS TARGET_DB.ATOMIC
 ```
 
 #### **Step 2:**  Upload the csv file
-2.1 Make sure you are within the SQL workspace:
-
-![sql_workspace](../images/sql_workspace.png?width=20pc)
+2.1 Log into your Databricks workspace.
 
 2.2 Select `+New` -> `File upload` to get started.
 
