@@ -52,9 +52,9 @@ subgraph cloud[Cloud]
     dbt[snowplow-mobile dbt package]
     streamlit[Streamlit]
 
-    snowplow -- "Loads raw events" --> snowflake
-    dbt -- "Models data" --> snowflake
-    streamlit -- "Visualises modeled data" --> snowflake
+    snowplow -- "Loads raw events" --> warehouse
+    dbt -- "Models data" --> warehouse
+    warehouse -- "Visualises modeled data" --> streamlit
 
     style dbt fill:#f5f5f5,stroke:#6638B8,stroke-width:3px
     click dbt "https://docs.snowplowanalytics.com/docs/modeling-your-data/the-snowplow-mobile-data-model/dbt-mobile-data-model/" "Open dbt package" _blank
@@ -75,7 +75,7 @@ tracker -- "Sends tracked events" --> snowplow
 
 #### What you will learn
 
-In approximately 10 working hours you can achieve the following:
+In approximately 9 working hours you can achieve the following:
 
 - **Upload data -** Upload a sample Snowplow events dataset to your warehouse
 - **Model -** Configure and run the snowplow-mobile data model
@@ -93,7 +93,7 @@ gantt
         section 2. Model
         2h          :model, after upload, 2m
         section 3. Visualise
-        3h          :visualise, after model, 3m
+        2h          :visualise, after model, 3m
         section 4. Track
         3h          :track, after visualise, 3m
         section 5. Next steps
