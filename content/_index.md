@@ -48,7 +48,7 @@ end
 
 subgraph cloud[Cloud]
     snowplow[Snowplow BDP/OS Cloud]
-    arehouse[(Warehouse)]
+    warehouse[(Warehouse)]
     dbt[snowplow-mobile dbt package]
     streamlit[Streamlit]
 
