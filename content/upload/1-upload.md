@@ -342,7 +342,7 @@ FROM ATOMIC.SAMPLE_EVENTS_MOBILE_BASE )
 ```sql
 DROP TABLE TARGET_DB.ATOMIC.SAMPLE_EVENTS_MOBILE_BASE
 ```
-You will now have the ATOMIC.SAMPLE_EVENTS_MOBILE created and loaded with sample data.
+You will now have the `ATOMIC.SAMPLE_EVENTS_MOBILE` created and loaded with sample data.
 
 {{% /tab %}}
 
@@ -355,14 +355,14 @@ You can load the sample data to the warehouse using your `Databricks Workspace` 
 
 For more details please check out the official [Databricks documentation](https://docs.databricks.com/ingestion/add-data/index.html).
 
-Step 1: Create the ATOMIC schema
+#### **Step 1:**   Create the ATOMIC schema
 If the ATOMIC schema doesn't exist, create it in your target database.
 
 ```sql
 CREATE SCHEMA IF NOT EXISTS TARGET_DB.ATOMIC
 ```
 
-Step 2: Upload the csv file
+#### **Step 2:**  Upload the csv file
 2.1 Make sure you are within the SQL workspace:
 
 ![sql_workspace](../images/sql_workspace.png?width=20pc)
@@ -670,7 +670,7 @@ FROM PREP
 
 )
 
-Step 4: Drop the SAMPLE_EVENTS_MOBILE_BASE table
+#### **Step 4:**  Drop the SAMPLE_EVENTS_MOBILE_BASE table
 
 ```sql
 DROP TABLE TARGET_DB.ATOMIC.SAMPLE_EVENTS_MOBILE_BASE
