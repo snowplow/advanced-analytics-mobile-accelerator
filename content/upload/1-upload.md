@@ -675,7 +675,7 @@ FROM PREP
 ```sql
 DROP TABLE TARGET_DB.ATOMIC.SAMPLE_EVENTS_MOBILE_BASE
 ```
-You will now have the ATOMIC.SAMPLE_EVENTS_MOBILE created and loaded with sample data.
+You will now have the `ATOMIC.SAMPLE_EVENTS_MOBILE` created and loaded with sample data.
 
 {{% /tab %}}
 
