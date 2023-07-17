@@ -6,7 +6,6 @@ chapter = false
 weight = 1
 +++
 
-!['logo-banner'](images/logo_banner.png)
 
 #### Introduction
 
@@ -22,50 +21,6 @@ Here you will learn to:
 - Apply what you have learned on your own pipeline to gain insights
 
 ***
-
-#### System overview
-
-The diagram below gives a complete overview of the system covered in this accelerator:
-
-1. Events are tracked from app logic inside the **mobile app**.
-   - Using the [Snowplow iOS](https://github.com/snowplow/snowplow-objc-tracker), [Android](https://github.com/snowplow/snowplow-android-tracker), [React Native](https://github.com/snowplow/snowplow-react-native-tracker), or [Flutter tracker](https://github.com/snowplow-incubator/snowplow-flutter-tracker).
-2. Tracked events are loaded into a warehouse by the Snowplow BDP or Open Source Cloud.
-3. The raw events are **modeled into higher level entities** such as screen views, sessions, or users using the [snowplow-mobile](https://docs.snowplowanalytics.com/docs/modeling-your-data/the-snowplow-mobile-data-model/dbt-mobile-data-model/) dbt package.
-4. Finally, we **visualize** the modeled data using Streamlit.
-
-{{<mermaid>}}
-flowchart TB
-
-subgraph mobileApp[Mobile App]
-    appCode[App logic]
-    tracker[Snowplow iOS/Android/React Native/Flutter tracker]
-
-    appCode -- "Tracks events" --> tracker
-
-    style tracker fill:#f5f5f5,stroke:#6638B8,stroke-width:3px
-    click tracker "https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/mobile-trackers/installation-and-set-up/" "Open tracker docs" _blank
-end
-
-subgraph cloud[Cloud]
-    snowplow[Snowplow BDP/OS Cloud]
-    warehouse[(Warehouse)]
-    dbt[snowplow-mobile dbt package]
-    streamlit[Streamlit]
-
-    snowplow -- "Loads raw events" --> warehouse
-    dbt -- "Models data" --> warehouse
-    warehouse -- "Visualises modeled data" --> streamlit
-
-    style dbt fill:#f5f5f5,stroke:#6638B8,stroke-width:3px
-    click dbt "https://docs.snowplowanalytics.com/docs/modeling-your-data/the-snowplow-mobile-data-model/dbt-mobile-data-model/" "Open dbt package" _blank
-    click snowplow "https://snowplow.io/snowplow-bdp/" "Snowplow BDP" _blank
-end
-
-tracker -- "Sends tracked events" --> snowplow
-{{</mermaid>}}
-
-***
-
 #### Who is this guide for?
 
 - Data practitioners who would like to get familiar with Snowplow data.
@@ -122,9 +77,51 @@ Please note that **Snowflake, BigQuery and Databricks** will be used for illustr
 {{% /notice %}}
 
 ***
-
 #### What you will build
 
 **Advanced Analytics for Mobile Dashboard**
 
 !['logo-banner' ](visualisation/images/streamlit.png?width=100pc)
+
+***
+#### System overview
+
+The diagram below gives a complete overview of the system covered in this accelerator:
+
+1. Events are tracked from app logic inside the **mobile app**.
+   - Using the [Snowplow iOS](https://github.com/snowplow/snowplow-objc-tracker), [Android](https://github.com/snowplow/snowplow-android-tracker), [React Native](https://github.com/snowplow/snowplow-react-native-tracker), or [Flutter tracker](https://github.com/snowplow-incubator/snowplow-flutter-tracker).
+2. Tracked events are loaded into a warehouse by the Snowplow BDP or Open Source Cloud.
+3. The raw events are **modeled into higher level entities** such as screen views, sessions, or users using the [snowplow-mobile](https://docs.snowplowanalytics.com/docs/modeling-your-data/the-snowplow-mobile-data-model/dbt-mobile-data-model/) dbt package.
+4. Finally, we **visualize** the modeled data using Streamlit.
+
+{{<mermaid>}}
+flowchart TB
+
+subgraph mobileApp[Mobile App]
+    appCode[App logic]
+    tracker[Snowplow iOS/Android/React Native/Flutter tracker]
+
+    appCode -- "Tracks events" --> tracker
+
+    style tracker fill:#f5f5f5,stroke:#6638B8,stroke-width:3px
+    click tracker "https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/mobile-trackers/installation-and-set-up/" "Open tracker docs" _blank
+end
+
+subgraph cloud[Cloud]
+    snowplow[Snowplow BDP/OS Cloud]
+    warehouse[(Warehouse)]
+    dbt[snowplow-mobile dbt package]
+    streamlit[Streamlit]
+
+    snowplow -- "Loads raw events" --> warehouse
+    dbt -- "Models data" --> warehouse
+    warehouse -- "Visualises modeled data" --> streamlit
+
+    style dbt fill:#f5f5f5,stroke:#6638B8,stroke-width:3px
+    click dbt "https://docs.snowplowanalytics.com/docs/modeling-your-data/the-snowplow-mobile-data-model/dbt-mobile-data-model/" "Open dbt package" _blank
+    click snowplow "https://snowplow.io/snowplow-bdp/" "Snowplow BDP" _blank
+end
+
+tracker -- "Sends tracked events" --> snowplow
+{{</mermaid>}}
+
