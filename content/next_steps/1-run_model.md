@@ -12,7 +12,7 @@ At this stage you should:
 
 #### **Step 1:** Complete refresh of your Snowplow mobile package (Optional)
 
-If you would like to use your current dbt environment that you set-up during modelling the sample data you might want to start from scratch.
+If you would like to use your current dbt environment that you set-up during modeling the sample data you might want to start from scratch.
 
 While you can drop and recompute the incremental tables within this package using the standard `--full-refresh` flag, all manifest tables are protected from being dropped in production. Without dropping the manifest during a full refresh, the selected derived incremental tables would be dropped but the processing of events would resume from where the package left off (as captured by the `snowplow_mobile_incremental_manifest` table) rather than your `snowplow__start_date`.
 
@@ -60,4 +60,3 @@ Run our recommended selector specified tests to identify potential issues with t
 dbt test --selector snowplow_mobile_lean_tests
 ```
 ***
-

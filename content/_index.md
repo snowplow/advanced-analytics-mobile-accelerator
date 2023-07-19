@@ -9,11 +9,11 @@ weight = 1
 
 #### Introduction
 
-Welcome to the **Advanced Analytics for Mobile** accelerator. Once finished, you will be able to build a deeper understanding of customer behaviour on your mobile apps and use your data to influence business decisions.
+Welcome to the **Advanced Analytics for Mobile** accelerator. Once finished, you will be able to build a deeper understanding of customer behavior on your mobile apps and use your data to influence business decisions.
 
 Here you will learn to:
 
-- Model and Visualise Snowplow data
+- Model and Visualize Snowplow data
   - using the [snowplow-mobile](https://hub.getdbt.com/snowplow/snowplow_mobile/latest/) dbt package and Streamlit
   - using our sample data (no need to have a working pipeline)
 - Set-up Snowplow Tracking in a mobile app
@@ -24,7 +24,7 @@ Here you will learn to:
 #### Who is this guide for?
 
 - Data practitioners who would like to get familiar with Snowplow data.
-- Data practitioners who would like to set up tracking in a mobile app and learn how to use the Snowplow mobile data model to gain insight from their customers' behavioural data as quickly as possible.
+- Data practitioners who would like to set up tracking in a mobile app and learn how to use the Snowplow mobile data model to gain insight from their customers' behavioral data as quickly as possible.
 
 ***
 
@@ -34,9 +34,9 @@ In approximately 9 working hours you can achieve the following:
 
 - **Upload data -** Upload a sample Snowplow events dataset to your warehouse
 - **Model -** Configure and run the snowplow-mobile data model
-- **Visualise -** Visualise the modeled data with Streamlit
+- **Visualize -** Visualize the modeled data with Streamlit
 - **Track -** Set-up and deploy tracking to your mobile app
-- **Next steps -** Gain value from your own pipeline data through modeling and visualisation
+- **Next steps -** Gain value from your own pipeline data through modeling and visualization
 
 
 {{<mermaid>}}
@@ -47,10 +47,10 @@ gantt
         1h          :upload, 00-00, 1m
         section 2. Model
         2h          :model, after upload, 2m
-        section 3. Visualise
-        2h          :visualise, after model, 3m
+        section 3. Visualize
+        2h          :Visualize, after model, 3m
         section 4. Track
-        3h          :track, after visualise, 3m
+        3h          :track, after Visualize, 3m
         section 5. Next steps
         1h          :next steps, after track, 1m
 
@@ -60,10 +60,9 @@ gantt
 
 #### Prerequisites
 
-**Modeling and Visualisation**
-
-- dbt CLI installed / dbt Cloud account available
-  - New dbt project created and configured
+**Modeling and Visualization**
+- [dbt CLI](https://docs.getdbt.com/docs/core/installation) installed or [dbt Cloud](https://docs.getdbt.com/docs/cloud/about-cloud-setup) account available
+  - New dbt [project](https://docs.getdbt.com/docs/build/projects) created and configured
 - Python 3 Installed
 - Snowflake, BigQuery or Databricks account and a user with access to create schemas and tables
 
@@ -115,7 +114,7 @@ subgraph cloud[Cloud]
 
     snowplow -- "Loads raw events" --> warehouse
     dbt -- "Models data" --> warehouse
-    warehouse -- "Visualises modeled data" --> streamlit
+    warehouse -- "Visualizes modeled data" --> streamlit
 
     style dbt fill:#f5f5f5,stroke:#6638B8,stroke-width:3px
     click dbt "https://docs.snowplowanalytics.com/docs/modeling-your-data/the-snowplow-mobile-data-model/dbt-mobile-data-model/" "Open dbt package" _blank
@@ -124,4 +123,3 @@ end
 
 tracker -- "Sends tracked events" --> snowplow
 {{</mermaid>}}
-
