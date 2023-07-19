@@ -1,5 +1,5 @@
 +++
-title = "Visualisation"
+title = "Visualization"
 chapter = true
 weight = 4
 pre = "3. "
@@ -8,7 +8,7 @@ post = ""
 
 <!-- ### Chapter 3 -->
 
-# Visualisation
+# Visualization
 
 {{<mermaid>}}
 flowchart LR
